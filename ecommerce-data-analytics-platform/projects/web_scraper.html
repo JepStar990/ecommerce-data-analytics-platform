@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Scraper - E-commerce Data Analytics Platform</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Web Scraper</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="web_scraper.html">Web Scraper</a></li>
+                <li><a href="api_development.html">API Development</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="report_generator.html">Report Generator</a></li>
+                <li><a href="chatbot.html">Chatbot</a></li>
+                <li><a href="data_pipeline.html">Data Pipeline</a></li>
+                <li><a href="predictive_modeling.html">Predictive Modeling</a></li>
+                <li><a href="recommendation_system.html">Recommendation System</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Web Scraper</h2>
+            <p>The web scraper collects product data from various e-commerce websites using Python, BeautifulSoup, and Requests.</p>
+            <pre><code>
+# Example code snippet for the web scraper
+import requests
+from bs4 import BeautifulSoup
+
+url = 'http://example.com/products'
+response = requests.get(url)
+soup = BeautifulSoup(response.text, 'html.parser')
+
+for product in soup.find_all('div', class_='product'):
+    name = product.find('h2').text
+    price = product.find('span', class_='price').text
+    print(name, price)
+            </code></pre>
+            <img src="../images/web_scraper.png" alt="Web Scraper Output">
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 E-commerce Data Analytics Platform</p>
+    </footer>
+</body>
+</html>
+
